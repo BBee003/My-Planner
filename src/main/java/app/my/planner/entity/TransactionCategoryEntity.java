@@ -21,7 +21,7 @@ public class TransactionCategoryEntity extends UserAwareEntity {
     @Column(name = "code", nullable = false, length = 50, unique = true)
     private String code;
 
-    @Column(name = "description")
+    @Column(name = "description", length = 500)
     private String description;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})

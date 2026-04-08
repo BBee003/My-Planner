@@ -30,4 +30,13 @@ public class TransactionTypeEntity extends BaseEntity {
 
     @OneToMany(mappedBy = "transactionType", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<ExpectedTransactionEntity> expectedTransactionList;
+
+    @OneToMany(mappedBy = "transactionType", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<ScheduleTransactionEntity> scheduleTransactionList;
+
+    @OneToMany(mappedBy = "transactionType", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<DayTransactionTypeEntity> dayTransactionTypeList;
+
+    @OneToMany(mappedBy = "transactionType", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<TransactionEntity> transactionList;
 }
