@@ -19,5 +19,5 @@ public class DayTypeEntity extends UserAwareEntity {
     private String name;
 
     @OneToMany(mappedBy = "dayType", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<DayTypeDetailEntity> dayTypeDetails;
+    private List<DayTypeDetailEntity> dayTypeDetailList;
 }

@@ -26,7 +26,7 @@ public class AssetEntity extends UserAwareEntity {
     private int inStock;
 
     @OneToMany(mappedBy = "asset", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<AssetHistoryEntity> assetHistories;
+    private List<AssetHistoryEntity> assetHistoryList;
 
     @OneToMany(mappedBy = "asset", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<TransactionEntity> transactionList;
